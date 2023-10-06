@@ -16,7 +16,7 @@
           ansible.builtin.file:
             path: "{{ postgresql_data_dir }}"
             state: absent
-      when: remove_postgres | default(false) | bool
+      when: remove_postgres | default(true) | bool
       ignore_errors: true
     - block:
         - name: Delete PgBackRest repository
@@ -70,5 +70,5 @@
           ansible.builtin.file:
             path: "{{ etcd_data_dir }}/member"
             state: absent
-      when: remove_etcd | default(false) | bool
+      when: remove_etcd | default(true) | bool
       ignore_errors: true
