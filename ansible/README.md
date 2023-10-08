@@ -2,11 +2,12 @@
 
 ## PREREQUISITES
 VMs:
-    node1 10.0.10.2 # roles: ansible, haproxy
-    node1 10.0.10.3 # roles: postgreSQL, patroni
-    node1 10.0.10.4 # roles: postgreSQL, patroni, etcd
-    node1 10.0.10.5 # roles: etcd
-    node1 10.0.10.6 # roles: etcd
+    balancer 10.0.10.2 91.185.84.176 # roles: ansible, haproxy
+    db1 10.0.10.3 # roles: postgreSQL, patroni
+    db2 10.0.10.4 # roles: postgreSQL, patroni
+    etcd-srv1 10.0.10.5 # roles: etcd
+    etcd-srv2 10.0.10.6 # roles: etcd
+    etcd-srv3 10.0.10.7 # roles: etcd
 
     login: bond
     ssh_key_public:
