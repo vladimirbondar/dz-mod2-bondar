@@ -1,41 +1,21 @@
 # dz-mod2-bondar
-# template https://github.com/vitabaks/postgresql_cluster
+# Template https://github.com/vitabaks/postgresql_cluster
 
 ## PREREQUISITES
 VMs:
-    balancer 10.0.10.2 91.185.84.176 # roles: ansible, haproxy
+    balancer 10.0.10.2 91.185.84.176 # roles: haproxy. ansible controller
     db1 10.0.10.3 # roles: postgreSQL, patroni
     db2 10.0.10.4 # roles: postgreSQL, patroni
     etcd-srv1 10.0.10.5 # roles: etcd
     etcd-srv2 10.0.10.6 # roles: etcd
     etcd-srv3 10.0.10.7 # roles: etcd
 
-    login: bond
+    login: vladimir
     ssh_key_public:
         ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDHNHPstSqDdJTy07vs1z/nJb3bva5LeAhiMH0ZWK8suBpuPPKoj4W8wznrSYyTUy5F9yWy7tW9ICBL/olhxw+xTOImiUlCt/ZtVo+0S7h9bhLUYwisS550Rh33OwvVbWRpk2pb3PoOkf0cZ+isLdacgGuwfEqV3P01IoqkoRqTDVUwyLkVH2RbDPRHD64EGTyP6Q/5NM/JnbfTJPyNnRS2PVKFD/YbW5Ub7nc+bYMYBsZToziS6nzYe0SM2SM1ecczzZMTedy1lagZX+OAH7K9Xlp7zfwt60TPa6QAZk11Ln+b+acsNqNXC0QLWxGyksPgTgwrmXoo9O8FArj4S0mMzJhN6aUb+FnXcoer1FuV+MwG2JxXOqhEoaxEYrU9Olhkw8Oidir 2CPH+JPI4JPpqmLhhQM2vE+ruK2XqrLH30s1fj+tHUbNCY0TDP5tkJwQG9DB6X96hTU5LSobnjHZ9zu3LlCj7HHNCJ1Xw+VZXuwfTOH/Ouq3IyHrdfACpeyLQM= vladimir@mbp--bond
     ssh_key_file: /home/bond/.ssh/bond.key # to be proivided separately
 
-## Deployment: quick start
-0. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) on one control node (node1)
+INSTALLTON:
+  see Template
 
-```
-sudo apt update && sudo apt install -y python3-pip git
-pip3 install ansible
-```
-
-1. Download or clone this repository
-```
-git clone https://github.com/vladimirbondar/dz-mod2-bondar.git
-```
-2. Go to the playbook directory
-```
-cd dz-mod2-bondar.git/ansible
-```
-3. Try to connect to hosts
-```
-ansible all -m ping
-```
-4. Run playbook:
-```
-ansible-playbook deploy_pgcluster.yml
-```
+UPDATE pg_hba.conf for haproxy access
