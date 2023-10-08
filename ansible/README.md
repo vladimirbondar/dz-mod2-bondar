@@ -1,4 +1,5 @@
 # dz-mod2-bondar
+# template https://github.com/vitabaks/postgresql_cluster
 
 ## PREREQUISITES
 VMs:
@@ -28,7 +29,7 @@ git clone https://github.com/vladimirbondar/dz-mod2-bondar.git
 ```
 2. Go to the playbook directory
 ```
-cd postgresql_cluster/
+cd dz-mod2-bondar.git/ansible
 ```
 3. Try to connect to hosts
 ```
