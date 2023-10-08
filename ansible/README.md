@@ -19,3 +19,4 @@ INSTALLTON:
   Template with source - https://github.com/vladimirbondar/dz-mod2-bondar.git -> dz-mod2-bondar/ansible 
 
 UPDATE pg_hba.conf for haproxy access
+
