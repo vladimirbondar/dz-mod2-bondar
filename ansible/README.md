@@ -16,6 +16,6 @@ VMs:
     ssh_key_file: /home/bond/.ssh/bond.key # to be proivided separately
 
 INSTALLTON:
-  Template with source - https://github.com/vladimirbondar/dz-mod2-bondar.git
+  Template with source - https://github.com/vladimirbondar/dz-mod2-bondar.git -> dz-mod2-bondar/ansible 
 
 UPDATE pg_hba.conf for haproxy access
