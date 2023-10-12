@@ -10,7 +10,9 @@
   vars_files:
     - vars/main.yml
     - vars/system.yml
-  environment: "{{ proxy_env | default({}) }}"
+  environment: "{{ proxy_env | default({}) }}" # You can use the environment keyword at the play, block, or task level to set an environment variable for an action on a remote host.
+                                               # With this keyword, you can enable using a proxy for a task that does http requests, set the required environment variables for language-specific version managers, and more.
+                                               # https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_environment.html#setting-the-remote-environment-in-a-task
 
   pre_tasks:
     - name: Include OS-specific variables
