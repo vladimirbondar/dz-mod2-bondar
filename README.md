@@ -3,20 +3,20 @@
     Student: Владимир Бондарь
     email: vladimir@bondar.ru
     namespace: sre-cource-student-12
-
+    
     https://github.com/vladimirbondar/dz-mod2-bondar.git
 
-ANSIBLE:
+ansible:
 
-    playbook: dz-mod2-bondar/ansible
+    playbook: dz-mod2-bondar/ansible
     pg_cluster: 91.185.84.176  port: 5000
     Template https://github.com/vitabaks/postgresql_cluster
 
-HELM:
+helm:
 
-    chart: dz-mod2-bondar/helm
-    api: http://weather.sre.student12/
-    host: 91.185.85.213    weather.sre.student22
+   chart: dz-mod2-bondar/helm
+   api: http://weather.sre.student12/
+   host: 91.185.85.213    weather.sre.student22
 
 # PREREQUISITES
 VMs:
