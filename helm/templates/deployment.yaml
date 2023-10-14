@@ -48,12 +48,14 @@ spec:
               port: http
             initialDelaySeconds: 2
             periodSeconds: 5
+            timeoutSeconds: 5
           readinessProbe:
             httpGet:
               path: /healthz/ready
               port: http
             initialDelaySeconds: 3
             periodSeconds: 10
+            timeoutSeconds: 5
           envFrom:
             - configMapRef:
                 name: {{ include "sre-course-student12.fullname" . }}
