@@ -7,11 +7,13 @@
     https://github.com/vladimirbondar/dz-mod2-bondar.git
 
 ANSIBLE:
+
     playbook: dz-mod2-bondar/ansible
     pg_cluster: 91.185.84.176  port: 5000
     Template https://github.com/vitabaks/postgresql_cluster
 
 HELM:
+
     chart: dz-mod2-bondar/helm
     api: http://weather.sre.student12/
     host: 91.185.85.213    weather.sre.student22
